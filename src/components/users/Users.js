@@ -11,21 +11,21 @@ class Users extends Component {
             },
             {
                 id : '2',
-                login : 'mojombo',
-                avatar_url : 'https://avatars0.githubusercontent.com/u/1?v=4',
-                html_url : 'https://github.com/mojombo'
+                login : 'Rahul',
+                avatar_url : 'https://avatars0.githubusercontent.com/u/4?v=4',
+                html_url : 'https://github.com/rahul0731'
             },
             {
                 id : '3',
                 login : 'mojombo',
-                avatar_url : 'https://avatars0.githubusercontent.com/u/1?v=4',
+                avatar_url : 'https://avatars0.githubusercontent.com/u/2?v=4',
                 html_url : 'https://github.com/mojombo'
             }
         ]
     }
     render() {
         return (
-            <div>
+            <div style={useStyle}>
                 {this.state.users.map(user => (
                     <UserItem key={user.id} user ={user}></UserItem>
                 ))}
@@ -34,4 +34,9 @@ class Users extends Component {
     }
 }
 
+const useStyle = {
+    display : 'grid',
+    gridTemplateColumns : 'repeat(3,1fr)',
+    gridGap :'1rem'
+}
 export default Users
